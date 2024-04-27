@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', monospace;
+
+}
+
+ul{
+
+	list-style: none;
+	background: #0082e6;
+}
+
+ul li{
+
+	display: inline-block;
+	position: relative;
+}
+
+ul li a{
+
+	display: block;
+	color: whitesmoke;
+	text-decoration: none;
+	text-align: center;
+	padding: 20px 25px;
+	font-size: 20px;
+
+}
+
+ul li ul.dropdown li{
+
+	display: block;
+
+}
+
+ul li ul.dropdown{
+
+	width: 100%;
+	position: relative;
+	z-index: 999;
+	display: none;
+	background: #E9B384;
+}
+
+ul li:hover ul.dropdown{
+
+	display: block;
+}
+
+strong{
+
+	color: #0082e6;
+}
+
+.Name{
+
+	font-size: 60px;
+}
+
+.profile{
+
+	max-width: 500px;
+	height: 500px;
+	border-radius: 800px;
+}
+
+.intro{
+
+	font-family: "Rubik Moonrocks", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.Certificates{
+
+	width: 80%;
+}
+
+.Achievements{
+
+	background: #E1F7F5;
+	border-radius: 30px;
+	 border-top: 4px solid #C0D6E8;
+}
+
+html{
+
+	scroll-behavior: smooth;
+}
+
+.intro2{
+
+	font-size: 40px;
+}
+
+.worked{
+
+	font-size: 50px;
+
+}
+
+.Projects{
+
+	background: #BBE2EC;
+	border-radius: 30px;
+	 border-top: 4px solid #C0D6E8;
+}
+
+.footicons{
+
+	max-width: 40px;
+	cursor: pointer;
+	
+}
+
+@media (max-width: 465px){
+
+	.profile{
+
+		width: 70%;
+		height: 70%;
+	}
+}
