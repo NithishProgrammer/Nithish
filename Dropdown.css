@@ -125,3 +125,16 @@ html{
 		height: 70%;
 	}
 }
+
+
+.quote{
+
+	background: #A3D8FF;
+	border-radius: 20px;
+}
+
+.Quoteoftoday{
+
+	font-family: "Kalam", cursive;
+  font-weight: 400px;
+}
