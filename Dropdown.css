@@ -138,3 +138,24 @@ html{
 	font-family: "Kalam", cursive;
   font-weight: 400px;
 }
+
+
+.Resume{
+
+	width: 200px;
+	height: 40px;
+	border-radius: 10px;
+	border: 0px;
+	background: #0082e6;
+	color: white;
+	cursor: pointer;
+	box-shadow: 5px 10px #38B6FF;
+	transition: 0.3s;
+	font-weight: bold;
+}
+
+.Resume:hover{
+
+	box-shadow: 5px 8px #0082e6;
+	background: #38B6FF;
+}
