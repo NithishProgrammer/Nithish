@@ -33,7 +33,7 @@ async function fetchResponse(userInput) {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': 'Bearer sk-proj-qK9AVifTIOAoN1GnaIonT3BlbkFJJFOW6BOGYRhO9oMvYHNb'
+                'Authorization': 'Bearer sk-proj-peUBTsVVIZqaPFHt2IPUT3BlbkFJRxgo4qPC6CCuyH77FwVG'
             },
             body: JSON.stringify({
                 "model": "text-davinci-003",
