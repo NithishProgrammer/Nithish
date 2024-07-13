@@ -92,9 +92,13 @@
 					<p>With this plan / product, Nithish will help you to build your Own Chatbot. The chatbot will be custom for you and answer about your resources only. MAke sure You give all the resources that should be added in your chatbot to reply.</p>
 					<h3><del>Rs.7,000</del> &nbsp; Rs.5,000</h3>
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-					<button id="buy">Buy this work for you</button>
+					<button id="buy" onclick="textmsg()">Buy this work for you</button>
+					
+					<br>
 				</div>
-				<br><br><br>
+				<p id="not"></p>
+				<br>
+				
 			</div>
 
 
@@ -138,7 +142,18 @@ src="https://www.chatbase.co/embed.min.js"
 chatbotId="yVrGhfrGoZiTK3C_yZvO_"
 domain="www.chatbase.co"
 defer>
+
 </script>
+
+<script>
+
+function textmsg(){
+	let msg = document.getElementById('not');
+	msg.innerText = "Currently not available !"
+
+}
+</script>
+
 
 </body>
 </html>
