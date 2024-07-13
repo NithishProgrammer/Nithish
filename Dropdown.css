@@ -59,6 +59,8 @@ strong{
 .Name{
 
 	font-size: 60px;
+	animation: typing 2s;
+	transition: 0.3s;
 }
 
 .profile{
@@ -158,4 +160,28 @@ html{
 
 	box-shadow: 5px 8px #0082e6;
 	background: #38B6FF;
+}
+
+
+@keyframes typing{
+
+	from{font-size: 14px;}
+}
+
+.ani{
+
+	animation: intro;
+	transition: 0.4s;
+	animation-duration: 4s;
+	animation-fill-mode: forwards;
+	
+
+}
+
+@keyframes intro{
+
+	from {text-decoration: none;}
+	to {text-decoration: underline rgb(55, 132, 247);
+		text-decoration-style: dotted}
+	
 }
