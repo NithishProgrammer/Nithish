@@ -302,3 +302,8 @@ input[type=submit]{
 	background-color: white;
 	color: blue;
 }
+
+#par{
+
+	padding: 4px;
+}
