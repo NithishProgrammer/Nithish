@@ -279,3 +279,26 @@ html{
 
 }
 	
+input{
+
+	padding: 8px;
+	border-radius: 4px;
+	border: solid 1px blue;
+}
+
+select{
+
+	padding: 4px;
+	border-radius: 4px;
+	border: solid 1px blue;
+}
+
+input[type=submit]{
+
+	padding: 6px 20px;
+	border-radius: 4px;
+	border: solid 1px rgb(207, 207, 245);
+	cursor: pointer;
+	background-color: white;
+	color: blue;
+}

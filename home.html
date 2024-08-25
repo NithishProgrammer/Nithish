@@ -111,8 +111,49 @@
 				<br>
 				
 			</div>
+			<div class="conv" id="conv">
+				<br>
+				<center>
+				<h3>Converse with Nithish.</h3>
+				<p>Share your ideas and knowledge in & about <span style="color: rgb(84, 84, 255); font-weight: bolder;">Technology</span> with Nithish for Progress !</p>
+<br>
+<h4 id="par">Thanks <span id="logger" style="color: rgb(84, 84, 255); font-weight: bolder;"></span> , for Submitting. You will get a mail soon..</h4>
+				<form action="https://sheetdb.io/api/v1/5w26q8pomyfvo" method="POST" id="sheetdb-form">
+					
 
+						<label for="">Name</label>
+						<br>
+						<input type="text" placeholder="Name.." name="data[Name]" id="logdata" required/>
+						<br><br>
+						<label for="">Email</label>
+						<br>
+						<input type="email" name="data[Email]" placeholder="Email.."  required/>
+						<br><br>
+						<label for="">Phone No.</label>
+						<br>
+						<input type="number" placeholder="Phoneno..." name="data[Phone]" required>
+						<br><br>
 
+						<label for="">Select date & Time</label>
+						<br>
+						<select name="data[Date]" required>
+							<option>Please Select</option>
+							<hr><br>
+							<option value="31/8/24 , 5:00 IST" name="data[Date]">31/8/24 , 5:00 IST</option><br>
+							<option value="7/9/24 , 5:00 IST" name="data[Date]">7/9/24 , 5:00 IST</option><br>
+							<option value="14/9/24 , 5:00 IST" name="data[Date]">14/9/24 , 5:00 IST</option><br>
+						</select>
+						<br><br>
+						<input type="submit" value="Submit" onclick="loggerr()">
+						<br>
+						
+					</form>
+					<br>
+				
+			</center>
+			<br>
+				
+			</div>
 		<div class="quote">
 			<br>
 
@@ -135,8 +176,46 @@
 		</div>
 		
 	</center>
-	
-	
+
+	<script>
+
+        let para = document.getElementById('par');
+		para.style.display = "none"
+		   var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+          e.preventDefault();
+          fetch(form.action, {
+              method : "POST",
+              body: new FormData(document.getElementById("sheetdb-form")),
+          }).then(
+              response => response.json()
+          ).then((html) => {
+            // you can put any JS code here
+            form.style.display = "none"
+
+            names.innerText = logdata;
+			names.style.display = "inline"
+
+          });
+        });
+
+		function loggerr() {
+
+			
+
+			let logdata = document.getElementById('logdata').value;
+
+			let names = document.getElementById('logger');
+
+			form.style.display = "none"
+			para.style.display = "inline"
+
+            names.innerText = logdata;
+			names.style.display = "inline"
+
+			
+		}
+	</script>
 
 	<script>
   AOS.init();
