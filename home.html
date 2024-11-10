@@ -24,7 +24,7 @@
 		</ul>
 	</nav>
 </head>
-<body oncontextmenu="return false;" />
+<body>
 <br><br><br>
 	<center>
 		<h1 data-aos="fade-right" class="Name">Hello! I'm <strong>Nithish S</strong></h1>
@@ -151,11 +151,7 @@
 
 			<h2 class="Quoteoftoday">Quote for Today</h2><br>
 
-			<h4 data-aos="fade-down-right">while noSuccess:</h4>
-			<h4 data-aos="fade-down-right">Tryagain()</h4>
-			<br data-aos="fade-down-right">
-			<h4 data-aos="fade-down-right">If dead:</h4>
-			<h4 data-aos="fade-down-right">Break</h4>
+			<h4 data-aos="fade-down-right" id="quotegen">While Success:</h4>
 			<br>
 			
 		</div><br>
@@ -233,6 +229,22 @@ function textmsg(){
 	msg.innerText = "Currently not available !"
 
 }
+</script>
+<script>
+
+const quote_p = document.getElementById('quotegen')
+const api_url = "https://quotes-api-self.vercel.app/quote/"
+async function get_q(url) {
+
+	const resp = await fetch(url);
+	let dataq = await resp.json();
+	quote_p.innerText = dataq["quote"]
+
+
+	
+}
+
+get_q(api_url);
 </script>
 
 
