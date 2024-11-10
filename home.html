@@ -152,6 +152,7 @@
 			<h2 class="Quoteoftoday">Quote for Today</h2><br>
 
 			<h4 data-aos="fade-down-right" id="quotegen">While Success:</h4>
+			<h6 id="quotegen_author"></h6>
 			<br>
 			
 		</div><br>
@@ -232,13 +233,15 @@ function textmsg(){
 </script>
 <script>
 
-const quote_p = document.getElementById('quotegen')
+const quote_p = document.getElementById('quotegen');
+const quote_author = document.getElementById('quotegen_author');
 const api_url = "https://quotes-api-self.vercel.app/quote/"
 async function get_q(url) {
 
 	const resp = await fetch(url);
 	let dataq = await resp.json();
 	quote_p.innerText = dataq["quote"]
+	quote_author.innerText = "- " + dataq["author"]
 
 
 	
