@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error - Something Went Wrong</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f8fc; /* Soft blue background */
+            color: #444;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .error-container {
+            text-align: center;
+            background: #fff;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 700px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .error-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        .error-container h1 {
+            font-size: 60px;
+            color: #0066cc; /* Deep blue color */
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .error-container p {
+            font-size: 20px;
+            margin-top: 10px;
+            color: #666;
+            font-weight: 300;
+        }
+        .error-container a {
+            display: inline-block;
+            margin-top: 30px;
+            text-decoration: none;
+            padding: 12px 25px;
+            background-color: #0066cc; /* Deep blue for button */
+            color: #fff;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 18px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .error-container a:hover {
+            background-color: #005bb5;
+            transform: scale(1.05);
+        }
+        @media (max-width: 768px) {
+            .error-container {
+                padding: 40px;
+            }
+            .error-container h1 {
+                font-size: 45px;
+            }
+            .error-container p {
+                font-size: 18px;
+            }
+        }
+        @media (max-width: 480px) {
+            .error-container {
+                padding: 30px;
+            }
+            .error-container h1 {
+                font-size: 40px;
+            }
+            .error-container p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h1>Oops! Something Went Wrong.</h1>
+        <p>We have an Issue with Processing your Request. Please try again later.</p>
+        <a href="https://nithishprogrammer.github.io/Nithish/home.html">Go Back to Homepage</a>
+        <br>
+        <br>
+        <p style="color: grey; font-size: 14px;">&copy; All right Reserved by <strong>Nithish</strong></p>
+    </div>
+</body>
+</html>
