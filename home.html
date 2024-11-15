@@ -24,7 +24,7 @@
 		</ul>
 	</nav>
 </head>
-<body oncontextmenu="return false;"/>
+<body>
 <br><br><br>
 	<center>
 		<h1 data-aos="fade-right" class="Name">Hello! I'm <strong>Nithish S</strong></h1>
@@ -123,7 +123,8 @@
 				<h3>Register <span style="color: rgb(84, 84, 255); font-weight: bolder;">Yourself</span> here.</h3>
 				<p>Hey, Subscribe to <span style="color: rgb(84, 84, 255); font-weight: bolder;">Technology</span> with Nithish for Progress and Updates from him. !</p>
 <br>
-<h4 id="par">Thanks <span id="logger" style="color: rgb(84, 84, 255); font-weight: bolder;"></span> , for Submitting. You will get a mail soon..</h4>
+<h4 id="par" style="text-decoration: underline; text-decoration-color: blue; text-underline-offset: 6px;">Thanks <span id="logger" style="color: rgb(84, 84, 255); font-weight: bolder;"></span> , for Submitting. You will get a mail soon..</h4>
+<div id="form_box_div" style="border: solid 2px rgb(161, 191, 247); border-radius: 16px; padding: 8px; margin: 0px 20px 20px 20px;">
 				<form action="https://sheetdb.io/api/v1/5w26q8pomyfvo" method="POST" id="sheetdb-form">
 					
 
@@ -140,6 +141,7 @@
 						<br>
 						
 					</form>
+				</div>
 					<br>
 				
 			</center>
@@ -169,6 +171,7 @@
 	<script>
 
         let para = document.getElementById('par');
+		let fbd = document.getElementById('form_box_div')
 		para.style.display = "none"
 		   var form = document.getElementById('sheetdb-form');
         form.addEventListener("submit", e => {
@@ -181,16 +184,16 @@
           ).then((html) => {
             // you can put any JS code here
             form.style.display = "none"
-
             names.innerText = logdata;
 			names.style.display = "inline"
+			
+
 
           });
         });
 
 		function loggerr() {
 
-			
 
 			let logdata = document.getElementById('logdata').value;
 
@@ -198,7 +201,7 @@
 
 			form.style.display = "none"
 			para.style.display = "inline"
-
+			fbd.style.display = "none"
             names.innerText = logdata;
 			names.style.display = "inline"
 
