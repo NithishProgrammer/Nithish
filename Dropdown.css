@@ -273,7 +273,8 @@ html{
 #shortintro{
 
 	padding: 8px;
-	font-family: "Open Sans", sans-serif;
+	font-family: 'Nimbus Mono PS', 'Courier New', monospace;
+	font-weight: 200;
 	font-size: 16px;
 	
 
