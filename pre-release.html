@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distance Finder Software - Pre-release</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        form {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+
+        input[type="text"], input[type="email"], input[type="submit"] {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="text"], input[type="email"]{
+            width: 90%;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Distance Finder Software - Pre-release</h1>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Version: 1.0.0</h2>
+            <p>Release Date: <strong>November 22, 2024</strong></p>
+        </section>
+
+        <section>
+            <h3>About the Software</h3>
+            <p>This command-line tool helps users find the distance between two locations. By entering the "From" and "To" places, users get accurate, real-time distance calculations. It is optimized for speed and currently only supports Windows systems.</p>
+        </section>
+
+        <section>
+            <h3>Key Features</h3>
+            <ul>
+                <li>Accurate global distance calculation</li>
+                <li>Windows-only compatibility</li>
+                <li>Command-line interface</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Known Issues</h3>
+            <ul>
+                <li>Accuracy depends on correct place names</li>
+                <li>Windows-only for now</li>
+            </ul>
+        </section>
+
+        <section style="text-align: center;">
+            <p>The software is available for testing before the final release on November 22, 2024. Stay tuned for updates!</p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h3>Register Here to Get the Software by Email When Released</h3>
+            <form action="https://sheetdb.io/api/v1/rkxktntp80be0" method="POST" id="sheetdb-form">
+                <label for="name">Name</label>
+                <input type="text" id="name_user" name="data[Name]" placeholder="Enter your name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="data[Email]" placeholder="Enter your email" required>
+
+                <input type="submit" value="Register Now" onclick="sub()">
+            </form>
+            <br>
+            <h5 id="thanks" style="color: #333;"></h5>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Nithish Programmer</p>
+    </footer>
+
+    <script>
+
+        
+        let thank_txt = document.getElementById('thanks');
+        thank_txt.style.display = "none"
+		var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+          e.preventDefault();
+          fetch(form.action, {
+              method : "POST",
+              body: new FormData(document.getElementById("sheetdb-form")),
+          }).then(
+              response => response.json()
+          ).then((html) => {
+            // you can put any JS code here
+
+
+          });
+        });
+
+        var name2 = document.getElementById('name_user');
+        function sub(){
+            form.style.display = "none"
+            thank_txt.style.display = 'inline'
+            var x = document.getElementById("name_user").value;
+            document.getElementById("thanks").innerHTML = 'Thanks ' + x + ' for Registering, You will get the software email Immediately when the sotware is released';
+        }
+        
+    </script>
+</body>
+</html>
+
+
