@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Hoodie</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0096FF;
+            color: white;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: white;
+            color: #0096FF;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            max-width: 100%;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: calc(100% - 20px);
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #0096FF;
+            border-radius: 5px;
+        }
+        .checkbox {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .checkbox input {
+            margin-right: 10px;
+        }
+        .button {
+            display: inline-block;
+            background-color: #0096FF;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #0077cc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Order Form</h1>
+        <img src="https://m.media-amazon.com/images/I/411m4y4R4sL.jpg" alt="Customizable Hoodie" width="160px">
+        <form action="https://sheetdb.io/api/v1/k83fi49b4r4nl" method="POST" id="sheetdb-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="data[Name]" required>
+            <p style="color: #4295e7;">The same "Name" will be printed on your Hoodie</p><br>
+            
+            <label for="phone">Phone Number</label>
+            <input type="number" id="phone" name="data[Phone]" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="data[Email]" required>
+            
+            <label for="size">Size</label>
+            <select id="size" name="data[Size]" required>
+                <option value="S">Small</option>
+                <option value="M">Medium</option>
+                <option value="L">Large</option>
+                <option value="XL">Extra Large</option>
+            </select>
+            
+            <img src="size_chart.jpg" alt="Size Chart">
+            
+            <label for="quantity">Quantity</label>
+            <select id="quantity" name="data[Quantity]" onchange="updateprice()" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+
+
+            <label for="place">Place</label>
+            <select id="place" name="data[Place]"  required>
+                <option></option>
+                <option value="Puducherry">Puducherry</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Hydrabad">Hydrabad</option>
+                <option value="Chennai">Chennai</option>
+            </select>
+            
+            <label for="address">Address</label>
+            <textarea id="address" name="data[Address]" rows="3" required></textarea>
+            
+            <label for="Nearby">Apartment No./Nearby Place</label>
+            <input type="text" id="Nearby" name="data[Nearby]" required>
+
+            <label for="apartment">Pincode</label>
+            <input type="number" id="pincode" name="data[Pincode]" required>
+            
+           <b> <p id="price_c" style="text-decoration: underline; text-underline-offset: 4px;">Total Price: Rs.900</p></b>
+            
+            <div class="checkbox">
+                <label for="cod" style="color: #02e486;">Only Cash on Delivery Available</label>
+            </div>
+            
+            <button type="submit" class="button" id="sub1" onclick="sub()">Submit Order</button>
+        </form>
+    </div>
+
+<script>
+
+    function updateprice(){
+
+        let quantity = document.getElementById('quantity').value;
+        let price = document.getElementById('price_c')
+
+        total = 900
+        total_price = total*quantity
+        price.innerText = 'Total Price: Rs.' + total_price
+    }
+
+    var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+          e.preventDefault();
+          fetch(form.action, {
+              method : "POST",
+              body: new FormData(document.getElementById("sheetdb-form")),
+          }).then(
+              response => response.json()
+          ).then((html) => {
+            // you can put any JS code here
+            let sub = document.getElementById('sub1');
+            let name = document.getElementById('name').value;
+            let size = document.getElementById('size').value;
+            sub.style.background = 'grey'
+            sub.innerHTML = 'Processing...'
+            localStorage.setItem("Name" , name)
+            localStorage.setItem("Size" , size)
+            window.location.href = 'thanks_ema.html'
+			
+
+
+          });
+        });
+       
+
+          
+
+</script>
+</body>
+</html>
