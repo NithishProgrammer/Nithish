@@ -115,14 +115,73 @@ Although I am just 16, I firmly believe that age should not define capability. T
 			<div class="shop">
 				<br>
 				<h2>Nithish Work for You too!</h2>
-				
-				<center>
-					<h4 style="color: rgb(18, 14, 228); font-weight: bolder; font-size: 20px;">Chatbot</h4>
-				</center>
+
 				<div class="boxes">
 
+					<center>
+						<h4 style="color: rgb(18, 14, 228); font-weight: bolder; font-size: 20px;">1. Feedback System for Schools</h4>
+					</center>
+					<br>
+
 				
-					<img src="Chat-bot.png" class="bot">
+					<img src="feedback.png" class="bot">
+					
+				
+					<p>This platform serves as a bridge between the school administration and its stakeholders, promoting transparency and improvement and also <strong> Makes Easier when people search About the School in the internet, while when it becomes difficult to approach the school Directly </strong>. Through an intuitive interface and advanced design, users can submit their input seamlessly. The collected feedback is valuable for schools to identify areas of excellence and improvement, fostering a better learning environment and operational efficiency. <strong>The Review System for Schools</strong>. After Making, The system will <strong>be done with Your School Name</strong> </p>
+					<h3><del>Rs.12,000</del> &nbsp; Rs.8,000</h3>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+					<button id="buy" onclick="openRe()">Buy this work for you</button>
+					
+					<br>
+
+					<div class="overlay-form" style="width: 92%;">
+						
+						<form action="https://formsubmit.co/nithishanaricle@gmail.com" method="POST" style="width: 95%; background-color: rgb(246, 250, 255); border-radius: 10px; border: 1px;">
+							<button style="position: absolute; right: 2px; padding: 2px; border: 1px; border-radius: 6px; color: white; background-color: rgb(247, 118, 118);" onclick="closeform()">Close</button>
+							<br>
+							<input type="hidden" name="_next" value="https://nithishprogrammer.github.io/Nithish/thanks">
+							<input type="hidden" name="_captcha" value="false">
+							<input type="hidden" name="_subject" value="You got New work from a Customer (Rev. Sysytem)">
+							<br>
+							<h3>Request for Making (Review System)</h3>
+							<br>
+
+							<label for="">Name</label><br>
+							<input type="text" placeholder="Enter Name" name="Name" required>
+							<br>
+							<label for="">Email</label>
+							<br>
+							<input type="email" name="Email" placeholder="Enter Email" required><br>
+							<label for="">Any note for Nithish</label>
+							<br>
+							<input type="text" name="Note from Customer." placeholder="Enter Your Note (Date you want to be finished , And any note to Nithish)" required><br>
+							<label for="">Agree to Make it and request</label>
+							<input type="checkbox" name="Agree" id="" name="Checked" value="Agreed to This" required>
+							<br><br>
+							<button type="submit" value="Submit" style="padding: 6px 20px;
+							border-radius: 4px;
+							border: solid 1px rgb(207, 207, 245);
+							cursor: pointer;
+							background-color: white;
+							color: blue;">Submit</button>
+							<br>
+							<br><br>
+						</form>
+					</div>
+				</div>
+				<br>
+				<hr>
+				<br>
+				
+				<div class="boxes">
+
+					<center>
+						<h4 style="color: rgb(18, 14, 228); font-weight: bolder; font-size: 20px;">2. Chatbot</h4>
+					</center>
+					<br>
+
+				
+					<img src="https://nithishprogrammer.github.io/Nithish/Chat-bot.png" class="bot">
 					
 				
 					<p>With this plan / product, Nithish will help you to build your Own <strong>Chatbot</strong>. The <strong>Chatbot will be custom</strong> for you and answer about your resources only. MAke sure <strong>You give all the resources</strong> that should be added in your chatbot to reply. Your bot can also <strong>Recognise Speech</strong> as well.</p>
@@ -131,6 +190,8 @@ Although I am just 16, I firmly believe that age should not define capability. T
 					<button id="buy" onclick="textmsg()">Buy this work for you</button>
 					
 					<br>
+
+					
 				</div>
 				<p id="not"></p>
 				<br>
@@ -191,6 +252,7 @@ Although I am just 16, I firmly believe that age should not define capability. T
 
 	<script>
 
+		
         let para = document.getElementById('par');
 		let fbd = document.getElementById('form_box_div')
 		para.style.display = "none"
@@ -255,6 +317,9 @@ defer>
 
 <script>
 
+let openR = document.querySelector('.overlay-form');
+openR.style.display = "none"
+
 function textmsg(){
 	let msg = document.getElementById('not');
 	msg.innerText = "Currently not available !"
@@ -278,6 +343,18 @@ async function get_q(url) {
 }
 
 get_q(api_url);
+
+function openRe(){
+
+	openR.style.position = "absolute"
+
+	openR.style.display = "block"
+}
+
+function closeform(){
+
+	openR.style.display = "none"
+}
 </script>
 
 
