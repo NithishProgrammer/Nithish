@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order Confirmation</title>
     <link href="https://nithishprogrammer.github.io/Nithish/home_icon.svg" rel="icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body style="margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #89CFF0; color: #000;">
     <table width="100%" style="background-color: #89CFF0; margin: 0; padding: 0;" cellpadding="0" cellspacing="0">
@@ -35,6 +36,8 @@
 font-weight: 500;">
                                 The order will be dispatched by Amazon, and live tracking information will be shared in the next email.
                             </p>
+                            <br>
+                            <button style="background-color: #0096FF; padding: 8px; border-radius: 6px; border: 0; color: white; font-weight: bold;" onclick="invoi()">Download Invoice</button>
                         </td>
                     </tr>
                     <tr>
@@ -57,46 +60,56 @@ font-weight: 500;">
         let parast = document.getElementById('paraatart');
         let primg = document.getElementById('primg');
         let proname1 = document.getElementById('productnnn')
+        let prir = document.getElementById('pricer')
+
         primg.src = localStorage.getItem("Pimg")
         name = localStorage.getItem("Name")
         size = localStorage.getItem("Size")
         proname1 = localStorage.getItem("Productname")
         parast.innerHTML = "Hey <b>" + name + '.</b> Your order of a <b>' + proname1 +'</b> of size <b>' + size + " </b>has been confirmed, by Nithish"
-        let prir = document.getElementById('pricer')
+        
         prir.innerText = localStorage.getItem("Price")
+        
+        
+
+        function invoi(){
+
+            const { jsPDF } = window.jspdf;
+
+            const clientName = localStorage.getItem("Name");
+            const invoiceId = Math.floor(Math.random() * 100000);
+            const items = localStorage.getItem("Productname");
+            const totalAmount = localStorage.getItem("Price");
+            const size2 = localStorage.getItem("Size")
+
+            // Create a new jsPDF instance
+            const doc = new jsPDF();
+
+            // Title and basic info
+            doc.setFontSize(24);
+            doc.text("Invoice from Nithish's Merch", 14, 20);
+            doc.setFontSize(12);
+            doc.text(`Invoice ID: ${invoiceId}`, 14, 40);
+            doc.text(`Customer: ${clientName}`, 14, 50);
+            doc.text(`Date: ${new Date().toLocaleDateString()}`, 14, 60);
+
+            // Add Items
+            doc.text("Items:", 14, 70);
+            doc.text(items, 14, 80);
+
+            // Total Amount
+            doc.text(`Total Amount: Rs.${totalAmount}`, 14, 100);
+            doc.text(`Thanks for Buying from Nithish's Merch`, 14, 140);
+
+            // Generate PDF
+            doc.save(`${invoiceId}_${clientName}_Invoice.pdf`);
+            
 
 
+        }
 
 
-        const { jsPDF } = window.jspdf;
-
-      const clientName = localStorage.getItem("Name");
-      const invoiceId = dMath.floor(Math.random() * 100000);
-      const items = localStorage.getItem("Productname");
-      const totalAmount = localStorage.getItem("Price");
-      const size2 = localStorage.getItem("Size")
-
-      // Create a new jsPDF instance
-      const doc = new jsPDF();
-
-      // Title and basic info
-      doc.setFontSize(20);
-      doc.text("Invoice", 14, 20);
-      doc.setFontSize(12);
-      doc.text(`Mail: ${invoiceId}`, 14, 30);
-      doc.text(`Customer: ${clientName}`, 14, 40);
-      doc.text(`Date: ${new Date().toLocaleDateString()}`, 14, 50);
-
-      // Add Items
-      doc.text("Items:", 14, 60);
-      doc.text(items, 14, 70);
-
-      // Total Amount
-      doc.text(`Total Amount: Rs.${totalAmount}`, 14, 120);
-
-      // Generate PDF
-      doc.save(`${invoiceId}_${clientName}_Invoice.pdf`);
-    
+        
         
         
     </script>
