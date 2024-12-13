@@ -64,6 +64,39 @@ font-weight: 500;">
         parast.innerHTML = "Hey <b>" + name + '.</b> Your order of a <b>' + proname1 +'</b> of size <b>' + size + " </b>has been confirmed, by Nithish"
         let prir = document.getElementById('pricer')
         prir.innerText = localStorage.getItem("Price")
+
+
+
+
+        const { jsPDF } = window.jspdf;
+
+      const clientName = localStorage.getItem("Name");
+      const invoiceId = dMath.floor(Math.random() * 100000);
+      const items = localStorage.getItem("Productname");
+      const totalAmount = localStorage.getItem("Price");
+      const size2 = localStorage.getItem("Size")
+
+      // Create a new jsPDF instance
+      const doc = new jsPDF();
+
+      // Title and basic info
+      doc.setFontSize(20);
+      doc.text("Invoice", 14, 20);
+      doc.setFontSize(12);
+      doc.text(`Mail: ${invoiceId}`, 14, 30);
+      doc.text(`Customer: ${clientName}`, 14, 40);
+      doc.text(`Date: ${new Date().toLocaleDateString()}`, 14, 50);
+
+      // Add Items
+      doc.text("Items:", 14, 60);
+      doc.text(items, 14, 70);
+
+      // Total Amount
+      doc.text(`Total Amount: Rs.${totalAmount}`, 14, 120);
+
+      // Generate PDF
+      doc.save(`${invoiceId}_${clientName}_Invoice.pdf`);
+    
         
         
     </script>
