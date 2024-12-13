@@ -15,12 +15,12 @@
                     <tr>
                         <td style="text-align: center;">
                             <h1 style="color: #89CFF0; margin-bottom: 10px;">Thank You for Your Order!</h1>
-                            <p style="color: #000; font-size: 16px; margin: 10px 0;" id="paraatart">Your order of a hoodie has been confirmed, by Nithish.</p>
+                            <p style="color: #000; font-size: 16px; margin: 10px 0;" id="paraatart">Your order of a <b> <span id="productnnn"> hoodie </span> </b> has been confirmed, by Nithish.</p>
                         </td>
                     </tr>
                     <tr>
                         <td style="text-align: center; padding: 20px;">
-                            <img src="https://nithishprogrammer.github.io/Nithish/merch/Hoodie_pic.jpg" alt="Hoodie" style="width: 150px; height: auto; border-radius: 10px;">
+                            <img src="https://nithishprogrammer.github.io/Nithish/merch/Hoodie_pic.jpg" alt="Hoodie" style="width: 150px; height: auto; border-radius: 10px;" id="primg">
                         </td>
                     </tr>
                     <tr>
@@ -29,7 +29,7 @@
                                 Delivery date will be shared soon in another email.
                             </p>
                             <p style="color: #000; font-size: 14px; margin: 10px 0;">
-                                <strong>Note:</strong> Only cash on delivery is available. Make sure to have ₹900 ready.
+                                <strong>Note:</strong> Only cash on delivery is available. Make sure to have <span id="pricer">₹900</span> ready.
                             </p>
                             <p style="color: #0047AB; font-size: 14px; margin: 10px 0; font-family: Rockwell, 'Rockwell Nova', 'Roboto Slab', 'DejaVu Serif', 'Sitka Small', serif;
 font-weight: 500;">
@@ -55,9 +55,16 @@ font-weight: 500;">
 
     <script>
         let parast = document.getElementById('paraatart');
+        let primg = document.getElementById('primg');
+        let proname1 = document.getElementById('productnnn')
+        primg.src = localStorage.getItem("Pimg")
         name = localStorage.getItem("Name")
         size = localStorage.getItem("Size")
-        parast.innerHTML = "Hey <b>" + name + '.</b> Your order of a hoodie of size <b>' + size + " </b>has been confirmed, by Nithish"
+        proname1 = localStorage.getItem("Productname")
+        parast.innerHTML = "Hey <b>" + name + '.</b> Your order of a <b>' + proname1 +'</b> of size <b>' + size + " </b>has been confirmed, by Nithish"
+        let prir = document.getElementById('pricer')
+        prir.innerText = localStorage.getItem("Price")
+        
         
     </script>
 </body>
