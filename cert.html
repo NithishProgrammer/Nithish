@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Design</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #f1f1f1;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        @font-face {
+        font-family: myFirstFont;
+        src: url(WhisperingSignature.ttf);
+}
+        
+        .certificate-container {
+            width: 600px;
+            max-width: 900px;
+            padding: 20px;
+            background-color: #fff;
+            border: 5px solid #00bcd4;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+        }
+
+        .certificate-header {
+            margin-bottom: 30px;
+        }
+
+        .certificate-header h1 {
+            font-size: 36px;
+            color: #00bcd4;
+            margin: 0;
+        }
+
+        .certificate-header p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .certificate-content {
+            margin: 20px 0;
+        }
+
+        .certificate-content h2 {
+            font-size: 28px;
+            color: #333;
+        }
+
+        .certificate-content p {
+            font-size: 20px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .certificate-footer {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .certificate-footer .signature {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .certificate-footer .date {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .download-btn {
+
+            padding: 10px 20px;
+            background-color: #00bcd4;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+           
+        }
+
+        .download-btn:hover {
+            background-color: #0097a7;
+        }
+    </style>
+</head>
+<body>
+    <div id="certificate" class="certificate-container">
+        <div class="certificate-header">
+            <h1>Recipro Skills</h1>
+            <p>Certificate of Achievement</p>
+        </div>
+        
+        <div class="certificate-content">
+            <h2>John Doe</h2>
+            <p>This certificate is awarded for completing the <span id="com_course">{}</span> in Recipro Skills</p>
+        </div>
+
+        <div class="certificate-footer">
+            <div class="signature">Signature <br><br><span style="font-family: myFirstFont; font-size: 20px;">Nithish</span><br>(CEO , Recipro Skills)</div>
+            <div class="date">Date: January 21, 2025</div>
+        </div>
+        
+        
+    </div>
+    <br>
+    <br>
+    <button class="download-btn" onclick="downloadCertificate()">Download Certificate</button>
+    
+
+    <script>
+        function downloadCertificate() {
+            var certificate = document.getElementById('certificate');
+            domtoimage.toPng(certificate)
+                .then(function (dataUrl) {
+                    var link = document.createElement('a');
+                    link.download = 'certificate.png';
+                    link.href = dataUrl;
+                    link.click();
+                })
+                .catch(function (error) {
+                    console.error('Error generating certificate:', error);
+                });
+        }
+    </script>
+</body>
+</html>
