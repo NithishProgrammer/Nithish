@@ -219,7 +219,7 @@ Although I am just 16, I firmly believe that age should not define capability. T
 						<input type="email" name="data[Email]" placeholder="Email.."  required/>
 					
 						<br><br>
-						<input type="submit" value="Submit" onclick="loggerr()">
+						<input type="submit" value="Submit" onclick="loggerr()" id="CSUB">
 						<br>
 						
 					</form>
@@ -254,7 +254,7 @@ Although I am just 16, I firmly believe that age should not define capability. T
 
 	<script>
 
-		
+	let sub1 = document.getElementById('CSUB');
         let para = document.getElementById('par');
 		let fbd = document.getElementById('form_box_div')
 		para.style.display = "none"
@@ -268,9 +268,13 @@ Although I am just 16, I firmly believe that age should not define capability. T
               response => response.json()
           ).then((html) => {
             // you can put any JS code here
+	   sub1.innerHTML = "Processing..";
+        sub1.style.background = "grey";
+        sub1.disabled = true
+        sub1.style.cursor = "none"
             form.style.display = "none"
             names.innerText = logdata;
-			names.style.display = "inline"
+	 names.style.display = "inline"
 			
 
 
