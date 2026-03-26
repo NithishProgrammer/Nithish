@@ -1,114 +1,100 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 *{
-
 	margin: 0;
 	padding: 0;
 	font-family: 'Poppins', monospace;
+}
 
+body, html {
+    overflow-x: hidden; /* This prevents the horizontal scroll bug */
+    width: 100%;
 }
 
 ul{
-
 	list-style: none;
 	background: #0082e6;
 }
 
 ul li{
-
 	display: inline-block;
 	position: relative;
 }
 
 ul li a{
-
 	display: block;
 	color: whitesmoke;
 	text-decoration: none;
 	text-align: center;
 	padding: 20px 25px;
 	font-size: 20px;
-
 }
 
 ul li ul.dropdown li{
-
 	display: block;
-
 }
 
 ul li ul.dropdown{
-
-	width: 100%;
-	position: relative;
+	width: 200px;
+	border-radius: 12px;
+	position: absolute;
 	z-index: 999;
 	display: none;
 	background: #E9B384;
 }
 
 ul li:hover ul.dropdown{
-
 	display: block;
 }
 
 strong{
-
 	color: #0082e6;
 }
 
 .Name{
-
 	font-size: 60px;
 	animation: typing 3.6s;
 	transition: 0.3s;
-	
 }
 
 .profile{
-
 	max-width: 500px;
 	height: 500px;
 	border-radius: 800px;
 }
 
 .intro{
-
 	font-family: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif;
-    	font-weight: 500;
-    	transition: 0.3s;
+    font-weight: 500;
+    transition: 0.3s;
   	padding: 8px;
 }
 
 .Certificates{
-
 	width: 80%;
 }
 
 .Achievements{
-
 	background: #E1F7F5;
 	border-radius: 30px;
 	 border-top: 4px solid #C0D6E8;
+     padding-bottom: 30px;
 }
 
 html{
-
 	scroll-behavior: smooth;
 }
 
 .intro2{
-
 	font-size: 40px;
+    padding-top: 20px;
 }
 
 .worked{
-
 	font-size: 50px;
-
 }
 
 .Projects{
-
 	background: #BBE2EC;
 	border-radius: 30px;
 	 border-top: 4px solid #C0D6E8;
@@ -116,37 +102,29 @@ html{
 }
 
 .footicons{
-
 	max-width: 40px;
 	cursor: pointer;
-	
 }
 
 @media (max-width: 465px){
-
 	.profile{
-
 		width: 70%;
 		height: 70%;
 	}
+    .Name { font-size: 40px; }
 }
 
-
 .quote{
-
 	background: #A3D8FF;
 	border-radius: 20px;
+    padding: 20px;
 }
 
 .Quoteoftoday{
-
 	font-family: "Kalam", cursive;
-  font-weight: 400px;
 }
 
-
 .Resume{
-
 	width: 200px;
 	height: 40px;
 	border-radius: 10px;
@@ -160,53 +138,41 @@ html{
 }
 
 .Resume:hover{
-
 	box-shadow: 5px 8px #0082e6;
 	background: #38B6FF;
 }
 
-
 @keyframes typing{
-
 	from{font-size: 14px;}
 }
 
 .ani{
-
 	animation: intro;
 	transition: 0.4s;
 	animation-duration: 4s;
 	animation-fill-mode: forwards;
-	
-
 }
 
 @keyframes intro{
-
 	from {text-decoration: none;}
 	to {text-decoration: underline rgb(55, 132, 247);
 		text-decoration-style: dotted}
-	
 }
 
 .shop{
-
 	background: #a9c5ff;
 	border-radius: 30px;
 	 border-top: 4px solid #C0D6E8;
+     padding: 20px;
 }
 
 .shop h2{
-
 	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	font-weight: bold;
 	margin-bottom: 12px;
 }
 
-
-
 .bot{
-
 	width: 150px;
 	object-fit: cover;
 	padding-right: 6px;
@@ -215,7 +181,6 @@ html{
 }
 
 .boxes{
-
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -224,23 +189,18 @@ html{
 }
 
 .shop p{
-
 	padding-left: 8px;
 	margin-bottom: 14px;
 }
 
-
 .shop h4{
-
 	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	font-weight: bolder;
 	font-size: 30px;
 	margin-bottom: 12px;
-
 }
 
 #buy{
-
 	color: white;
 	transition: 0.4s;
 	padding: 8px;
@@ -252,50 +212,33 @@ html{
 	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	font-weight: bold;
 	align-items: center;
-
-	
 }
 
 #buy:hover{
-
 	background-color: white;
 	color: #0082e6;
 	margin-bottom: 6px;
 }
 
 #not{
-
 	color: rgb(243, 113, 113);
-	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	font-weight: bold;
 }
 
 #shortintro{
-
 	padding: 8px;
 	font-family: 'Nimbus Mono PS', 'Courier New', monospace;
 	font-weight: 400;
 	font-size: 16px;
-	
-
 }
 	
-input{
-
+input, select{
 	padding: 8px;
-	border-radius: 4px;
-	border: solid 1px blue;
-}
-
-select{
-
-	padding: 4px;
 	border-radius: 4px;
 	border: solid 1px blue;
 }
 
 input[type=submit]{
-
 	padding: 6px 20px;
 	border-radius: 4px;
 	border: solid 1px rgb(207, 207, 245);
@@ -304,11 +247,150 @@ input[type=submit]{
 	color: blue;
 }
 
-#par{
-
-	padding: 4px;
+/* --- NEW SKILLS CSS --- */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 25px auto;
+    max-width: 90%;
 }
 
-#quotegen{
-	padding: 4px;
+.skill-badge {
+    background: white;
+    color: #0082e6;
+    border: 2px solid #0082e6;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 4px 4px 0px #38B6FF;
+    transition: 0.3s ease;
+}
+
+.skill-badge:hover {
+    transform: translateY(-5px);
+    background: #0082e6;
+    color: white;
+}
+
+/* --- ARTISTIC ROADMAP CSS --- */
+/* --- PREVENT OVERFLOW --- */
+body, html {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.Experience-Section {
+    background: #f0f7ff;
+    padding: 60px 20px;
+    margin: 40px auto;
+    border-radius: 30px;
+    border-top: 4px solid #C0D6E8;
+    max-width: 1100px; /* Limits width on large monitors */
+}
+
+/* Roadmap Wrapper */
+.roadmap {
+    position: relative;
+    max-width: 800px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* The vertical line - centered on desktop */
+.roadmap::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: #0082e6;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+.roadmap-item {
+    position: relative;
+    width: 50%; /* Only takes half the width */
+    padding: 20px 40px;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+/* Odd items go to the left, text aligns right */
+.roadmap-item:nth-child(odd) {
+    align-self: flex-start;
+    text-align: right;
+}
+
+/* Even items go to the right, text aligns left */
+.roadmap-item:nth-child(even) {
+    align-self: flex-end;
+    text-align: left;
+}
+
+/* The dots on the line */
+.roadmap-item::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border: 4px solid #38B6FF;
+    border-radius: 50%;
+    top: 25px;
+    z-index: 3;
+}
+
+/* Position dots exactly on the center line */
+.roadmap-item:nth-child(odd)::after {
+    right: -12px;
+}
+
+.roadmap-item:nth-child(even)::after {
+    left: -12px;
+}
+
+.road-date {
+    font-weight: bold;
+    color: #0082e6;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.road-content {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: inline-block; /* Prevents box from being too wide */
+    text-align: left; /* Keeps text inside the box normal */
+}
+
+/* --- RESPONSIVE FIX FOR MOBILE --- */
+@media screen and (max-width: 768px) {
+    .roadmap::after {
+        left: 20px; /* Move line to the side */
+    }
+
+    .roadmap-item {
+        width: 100%;
+        align-self: flex-start !important;
+        text-align: left !important;
+        padding-left: 50px;
+        padding-right: 10px;
+    }
+
+    .roadmap-item::after {
+        left: 10px !important;
+        right: auto !important;
+    }
+
+    .road-content {
+        display: block;
+        width: 100%;
+    }
 }
