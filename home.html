@@ -1,443 +1,1061 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Nithish S</title>
-	 <meta name="description" content="Explore Nithish's portfolio showcasing web development projects, his merchandise shop, and his contributions as a Google Developer Group member.">
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nithish S | Web Developer & AI Enthusiast</title>
+    <meta name="description" content="Explore Nithish's portfolio showcasing web development projects, his merchandise shop, and his contributions as a Google Developer Group member.">
     <meta name="keywords" content="Nithish portfolio, Nithish web developer, merchandise shop, Google Developer Group member, web development projects, JavaScript developer, HTML CSS projects, AI development, front-end development, product features, Nithish's merchandise, e-commerce, tech portfolio, coding, software development, technology products, web development portfolio, Google Dev Groups, Nithish's products, innovative tech solutions, JavaScript projects, HTML CSS portfolio, product features">
-
     <meta property="og:title" content="Nithish's Portfolio - Web Developer | Merchandise Shop | Google Developer Group Member">
     <meta property="og:description" content="Explore Nithish's portfolio, featuring cutting-edge web development projects, his merchandise shop, and involvement with Google Developer Groups.">
     <meta property="og:image" content="https://raw.githubusercontent.com/NithishProgrammer/Nithish/main/Profile.jpg">
     <meta property="og:url" content="https://nithishprogrammer.github.io/Nithish/">
     <meta property="og:type" content="website">
-	
-	<link rel="stylesheet" type="text/css" href="Dropdown.css">
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-	<link href="home_icon.svg" rel="icon">
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="home_icon.svg" rel="icon">
 
-	<nav>
-		<ul>
-			<li><a href="#">Home</a></li>
-			<li><a href="#">More</a>
-				<ul class="dropdown">
-					<li><a href="#Achievements">Certifications</a></li>
-                    <li><a href="#Experience">Experience</a></li>
-					<li><a href="#Projects">Projects</li></a>
-				</ul></li>
+    <style>
+        /* Modern Blue & White Theme */
+        :root {
+            --primary-blue: #2563EB;
+            --light-blue: #EFF6FF;
+            --mid-blue: #93C5FD;
+            --dark-blue: #1E3A8A;
+            --text-dark: #1F2937;
+            --text-light: #6B7280;
+            --white: #FFFFFF;
+            --bg-gray: #F8FAFC;
+        }
 
-		</ul>
-	</nav>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body, html {
+            overflow-x: hidden;
+            width: 100%;
+            background-color: var(--bg-gray);
+            color: var(--text-dark);
+            scroll-behavior: smooth;
+        }
+
+        /* Navbar */
+        nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            display: block;
+            color: var(--primary-blue);
+            text-decoration: none;
+            padding: 20px 30px;
+            font-size: 16px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--dark-blue);
+            background: var(--light-blue);
+        }
+
+        /* Dropdown */
+        nav ul li ul.dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--white);
+            min-width: 200px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 0 0 12px 12px;
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        nav ul li:hover ul.dropdown {
+            display: flex;
+        }
+
+        nav ul li ul.dropdown li a {
+            padding: 15px 20px;
+            border-bottom: 1px solid #f1f1f1;
+        }
+
+        /* Sections Structure */
+        section {
+            padding: 100px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            color: var(--dark-blue);
+            margin-bottom: 50px;
+            font-weight: 700;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--light-blue) 0%, var(--white) 100%);
+            padding-top: 120px;
+        }
+
+        .hero-content {
+            flex: 1;
+            padding-right: 50px;
+        }
+
+        .hero-image {
+            flex: 1;
+            text-align: center;
+            position: relative;
+        }
+
+        .profile {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 50%;
+            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.2);
+            border: 8px solid var(--white);
+            object-fit: cover;
+        }
+
+        .Name {
+            font-size: 48px;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+
+        .Name strong {
+            color: var(--primary-blue);
+        }
+
+        .intro {
+            font-size: 24px;
+            font-weight: 400;
+            color: var(--text-light);
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        .intro .ani {
+            color: var(--primary-blue);
+            font-weight: 600;
+        }
+
+        #shortintro {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--text-dark);
+            margin-bottom: 30px;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: 0.3s;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--primary-blue);
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: var(--dark-blue);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: #8B5CF6; /* Merch color from original */
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background: #7C3AED;
+            transform: translateY(-2px);
+        }
+
+        .button-group {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Skills */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .skill-badge {
+            background: var(--white);
+            color: var(--primary-blue);
+            border: 1px solid var(--mid-blue);
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 14px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: 0.3s ease;
+        }
+
+        .skill-badge:hover {
+            background: var(--primary-blue);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        /* Achievements Grid */
+        #Achievements {
+            background: var(--white);
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .Certificates {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+            border: 1px solid #E5E7EB;
+        }
+
+        .Certificates:hover {
+            transform: scale(1.03);
+        }
+
+        /* Roadmap/Experience */
+        #Experience {
+            background: var(--bg-gray);
+        }
+
+        .roadmap {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .roadmap::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: var(--mid-blue);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+            border-radius: 4px;
+        }
+
+        .roadmap-item {
+            padding: 20px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+        .roadmap-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+
+        .roadmap-item:nth-child(even) {
+            left: 50%;
+            text-align: left;
+        }
+
+        .roadmap-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: var(--white);
+            border: 4px solid var(--primary-blue);
+            border-radius: 50%;
+            top: 30px;
+            z-index: 1;
+        }
+
+        .roadmap-item:nth-child(odd)::after {
+            right: -12px;
+        }
+
+        .roadmap-item:nth-child(even)::after {
+            left: -12px;
+        }
+
+        .road-content {
+            background: var(--white);
+            padding: 24px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid #E5E7EB;
+            display: inline-block;
+            width: 100%;
+            text-align: left;
+        }
+
+        .road-date {
+            font-weight: 700;
+            color: var(--primary-blue);
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .road-content h4 {
+            font-size: 18px;
+            color: var(--dark-blue);
+            margin-bottom: 8px;
+        }
+
+        /* Projects */
+        #Projects {
+            background: var(--white);
+        }
+        
+        .projects-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .projects-header h3 {
+            color: var(--text-light);
+            font-weight: 400;
+        }
+        .projects-header strong {
+            color: var(--primary-blue);
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: var(--bg-gray);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid #E5E7EB;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .project-card:hover {
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+            transform: translateY(-5px);
+            border-color: var(--mid-blue);
+        }
+
+        .project-card h2 {
+            font-size: 22px;
+            color: var(--dark-blue);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .project-card h3.desc {
+            font-size: 15px;
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 25px;
+            font-weight: 400;
+        }
+
+        .project-link {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+        }
+
+        .project-link:hover {
+            color: var(--dark-blue);
+            gap: 12px;
+        }
+
+        /* Shop Section */
+        .shop {
+            background: var(--light-blue);
+        }
+
+        .shop-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .shop-box {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            position: relative;
+        }
+
+        .shop-box h4 {
+            color: var(--dark-blue);
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .bot-img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            border: 4px solid var(--light-blue);
+        }
+
+        .shop-box p {
+            color: var(--text-light);
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .price {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+        }
+        
+        .price del {
+            color: #9CA3AF;
+            font-size: 18px;
+            font-weight: 400;
+            margin-right: 10px;
+        }
+
+        /* Modal Form */
+        .overlay-form {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            backdrop-filter: blur(5px);
+        }
+
+        .form-content {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 16px;
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 15px; right: 20px;
+            background: #EF4444;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        form input[type="text"], form input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0 20px;
+            border: 1px solid #D1D5DB;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+
+        form input[type="submit"], form button[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background: var(--primary-blue);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Newsletter / Registration */
+        .conv {
+            background: var(--white);
+            text-align: center;
+        }
+        
+        #form_box_div {
+            max-width: 500px;
+            margin: 30px auto;
+            padding: 30px;
+            background: var(--bg-gray);
+            border-radius: 16px;
+            border: 1px solid #E5E7EB;
+        }
+
+        /* Quote Section */
+        .quote {
+            background: var(--dark-blue);
+            color: var(--white);
+            text-align: center;
+            padding: 80px 20px;
+            position: relative;
+        }
+
+        .quote i {
+            font-size: 60px;
+            color: rgba(255,255,255,0.1);
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .Quoteoftoday {
+            font-family: 'Kalam', cursive;
+            font-size: 20px;
+            color: var(--mid-blue);
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        #quotegen {
+            font-size: 28px;
+            font-weight: 300;
+            line-height: 1.5;
+            max-width: 800px;
+            margin: 0 auto 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        #quotegen_author {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--mid-blue);
+        }
+
+        /* Footer */
+        .Footer {
+            background: #111827;
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-light);
+        }
+
+        .footicons {
+            width: 32px;
+            margin: 0 10px;
+            transition: 0.3s;
+            filter: grayscale(100%) brightness(200%);
+        }
+
+        .footicons:hover {
+            filter: grayscale(0%) brightness(100%);
+            transform: translateY(-3px);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding-top: 100px;
+            }
+            .hero-content {
+                padding-right: 0;
+                margin-top: 40px;
+            }
+            .button-group {
+                justify-content: center;
+            }
+            .roadmap::after {
+                left: 20px;
+            }
+            .roadmap-item {
+                width: 100%;
+                text-align: left !important;
+                padding-left: 50px;
+            }
+            .roadmap-item:nth-child(even) {
+                left: 0;
+            }
+            .roadmap-item::after {
+                left: 10px !important;
+            }
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            nav ul li a {
+                padding: 15px;
+            }
+        }
+    </style>
 </head>
 <body oncontextmenu="return false">
-<br><br><br>
-	<center>
-		<h1 data-aos="fade-right" class="Name">Hello! I'm <strong>Nithish S</strong></h1>
 
-		<br><br>
-		<img src="https://raw.githubusercontent.com/NithishProgrammer/Nithish/main/Profile.jpg" class="profile" data-aos="zoom-in" loading="eager"><br><br>
-		<h2 class="intro">I'm Glad to introduce myself as a <strong class="ani">Web Developer</strong> and <strong class="ani">AI Enthusiast</strong></h2>
-		<br>
-		<div class="skills-container" data-aos="fade-up">
-            <span class="skill-badge">HTML , CSS</span>
-            <span class="skill-badge">JS (Mid)</span>
-            <span class="skill-badge">Python (Mid)</span>
-            <span class="skill-badge">API Handling</span>
-            <span class="skill-badge">AI Tools</span>
-            <span class="skill-badge">Product Management</span>
-        </div><br>
-		<p id="shortintro">🖥️ 🌐 I am a passionate programmer and web developer and AI enthusiast with a strong foundation in front-end technologies like JavaScript, HTML, and CSS, along with experience in building impactful projects such as e-commerce platforms, weather applications, and custom chatbots. I am actively learning AI at the moment, and deeply inspired by the potential of AI and machine learning, and I aspire to build innovative and responsible AI systems 🤖 in the future that can benefit society and address real-world challenges. <br> <br>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#"><i class="fas fa-bars"></i> More <i class="fas fa-caret-down"></i></a>
+                <ul class="dropdown">
+                    <li><a href="#Achievements"><i class="fas fa-certificate"></i> Certifications</a></li>
+                    <li><a href="#Experience"><i class="fas fa-briefcase"></i> Experience</a></li>
+                    <li><a href="#Projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
 
-My current focus is on enhancing my skills in Python and collaborating with AI/ML developers to learn from their expertise and contribute to exciting projects. I believe collaboration is a powerful tool for growth, and I am eager to connect with like-minded developers who share my 💡 vision of creating technology that is ethical, impactful, and transformative. <br> <br>
+    <!-- Hero Section -->
+    <section class="hero" id="Home">
+        <div class="hero-content" data-aos="fade-right">
+            <h1 class="Name">Hello! I'm <strong>Nithish S</strong></h1>
+            <h2 class="intro">I'm Glad to introduce myself as a <span class="ani">Web Developer</span> and <span class="ani">AI Enthusiast</span></h2>
+            
+            <div class="skills-container">
+                <span class="skill-badge"><i class="fab fa-js"></i> JS (Mid)</span>
+                <span class="skill-badge"><i class="fab fa-python"></i> Python (Mid)</span>
+                <span class="skill-badge"><i class="fas fa-server"></i> API Handling</span>
+                <span class="skill-badge"><i class="fas fa-robot"></i> AI Tools</span>
+                <span class="skill-badge"><i class="fas fa-server"></i> FastAPI</span>
+            </div>
 
-Although I am just 17, I firmly believe that age should not define capability. Talent, dedication, and the willingness to learn are what truly matter. I am ready to collaborate, contribute, and grow alongside developers who are as passionate about innovation and impact as I am.</p>
-	
-		<br>
-		<a href="resume(Nithish).pdf" download="Nithish's_Resume"><button class="Resume">Download My Resume</button></a><br><br><br>
-       <a href="https://nithishprogrammer.github.io/Nithish/merch/" style="text-decoration: none;"><div style=" width: 260px; padding: 6px; background-color: #8576FF; color: aliceblue; border: 1px solid blue; border-radius: 12px; justify-content: center; align-items: center; display: flex; cursor: pointer; box-shadow: 10px 10px rgb(190, 166, 236);">Shop at Nithish's Merch <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" style="width: 20px; padding: 2px;">&nbsp;<img src="https://cdn-icons-png.flaticon.com/512/736/736161.png" style="width: 25px; padding: 2px;"></div></a>
-	   <br><br>
-		
-       <div class="Achievements" id="Achievements">
-		<h1 class="intro2"><strong>My Achievements</strong></h1>
-		<br><br><br>
-		<img src="Html_certificate.jpg" class="Certificates" data-aos="zoom-out-right" loading="eager"><br><br><br>
-		<img src="UX.jpg" class="Certificates" data-aos="zoom-out-right" loading="eager"><br><br><br>
-		<img src="IITB_Cert.jpg" class="Certificates" data-aos="zoom-out-right" loading="eager"><br><br><br>
-		<img src="AI_certificate.jpg" class="Certificates" data-aos="zoom-out-right" loading="eager"><br><br><br>
-		<img src="https://raw.githubusercontent.com/NithishProgrammer/Nithish/refs/heads/main/Python_basic.png" class="Certificates" data-aos="zoom-out-right"><br><br><br>
-		<img src="Certificate.jpg" class="Certificates" data-aos="zoom-out-right" loading="eager"><br><br><br>
-		<img src="UX-UI.jpg" class="Certificates" data-aos="zoom-out-right" loading="eager"><br><br><br>
-		</div>
+            <p id="shortintro">
+                <i class="fas fa-desktop"></i> <i class="fas fa-globe"></i> I am a passionate programmer, web developer, and AI enthusiast with a strong foundation in front-end technologies like JavaScript, HTML, and CSS. I have experience building impactful projects such as e-commerce platforms, weather applications, and custom chatbots. I am actively learning AI at the moment, and deeply inspired by the potential of AI and machine learning. I aspire to build innovative and responsible AI systems <i class="fas fa-robot"></i> in the future that benefit society and address real-world challenges.<br><br>
+                My current focus is on enhancing my skills in Python and collaborating with AI/ML developers to learn from their expertise and contribute to exciting projects. I believe collaboration is a powerful tool for growth, and I am eager to connect with like-minded developers who share my <i class="fas fa-lightbulb"></i> vision of creating technology that is ethical, impactful, and transformative.<br><br>
+                Although I am just 17, I firmly believe that age should not define capability. Talent, dedication, and the willingness to learn are what truly matter. I am ready to collaborate, contribute, and grow alongside developers who are as passionate about innovation and impact as I am.
+            </p>
 
-        <div class="Experience-Section" id="Experience">
-    <h1 class="worked" data-aos="fade-down">My Journey</h1>
-	<p>5 years of Programming and into the Field</p>
-    <div class="roadmap-container">
+            <div class="button-group">
+                <a href="Nithish_Resume.pdf" download="Nithish_Resume" class="btn btn-primary">
+                    <i class="fas fa-download"></i> Download Resume
+                </a>
+                <a href="https://nithishprogrammer.github.io/Nithish/merch/" class="btn btn-secondary">
+                    <i class="fas fa-shopping-bag"></i> Shop at Nithish's Merch
+                </a>
+            </div>
+        </div>
+        
+        <div class="hero-image" data-aos="zoom-in">
+            <img src="https://raw.githubusercontent.com/NithishProgrammer/Nithish/main/Profile.jpg" class="profile" loading="eager" alt="Nithish S Profile">
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="Achievements">
+        <h2 class="section-title" data-aos="fade-up">My Achievements</h2>
+        <div class="cert-grid">
+            <img src="Html_certificate.jpg" class="Certificates" data-aos="zoom-out-up" loading="lazy" alt="HTML Certificate">
+            <img src="UX.jpg" class="Certificates" data-aos="zoom-out-up" data-aos-delay="100" loading="lazy" alt="UX Certificate">
+            <img src="IITB_Cert.jpg" class="Certificates" data-aos="zoom-out-up" data-aos-delay="200" loading="lazy" alt="IITB Certificate">
+            <img src="AI_certificate.jpg" class="Certificates" data-aos="zoom-out-up" data-aos-delay="300" loading="lazy" alt="AI Certificate">
+            <img src="https://raw.githubusercontent.com/NithishProgrammer/Nithish/refs/heads/main/Python_basic.png" class="Certificates" data-aos="zoom-out-up" data-aos-delay="400" loading="lazy" alt="Python Certificate">
+            <img src="Certificate.jpg" class="Certificates" data-aos="zoom-out-up" data-aos-delay="500" loading="lazy" alt="Certificate">
+            <img src="UX-UI.jpg" class="Certificates" data-aos="zoom-out-up" data-aos-delay="600" loading="lazy" alt="UI/UX Certificate">
+        </div>
+    </section>
+
+    <!-- Experience / Roadmap Section -->
+    <section id="Experience">
+        <h2 class="section-title" data-aos="fade-down">My Journey <br><span style="font-size: 18px; color: var(--text-light); font-weight: 400;">5 years of Programming and into the Field</span></h2>
+        
         <div class="roadmap">
             <div class="roadmap-item" data-aos="fade-right">
-                <div class="road-date">Nov 2020</div>
                 <div class="road-content">
+                    <div class="road-date"><i class="far fa-calendar-alt"></i> Nov 2020</div>
                     <h4>Interest Sparks</h4>
                     <p>Learnt what coding is and why it is used.</p>
                 </div>
             </div>
             <div class="roadmap-item" data-aos="fade-left">
-                <div class="road-date">2021</div>
                 <div class="road-content">
+                    <div class="road-date"><i class="far fa-calendar-alt"></i> 2021</div>
                     <h4>Web Core</h4>
                     <p>Mastered HTML, CSS, and reached Mid-level in JS.</p>
                 </div>
             </div>
             <div class="roadmap-item" data-aos="fade-right">
-                <div class="road-date">2022</div>
                 <div class="road-content">
+                    <div class="road-date"><i class="far fa-calendar-alt"></i> 2022</div>
                     <h4>Project Building</h4>
                     <p>Built several simple projects to apply web skills.</p>
                 </div>
             </div>
             <div class="roadmap-item" data-aos="fade-left">
-                <div class="road-date">2023</div>
                 <div class="road-content">
+                    <div class="road-date"><i class="far fa-calendar-alt"></i> 2023</div>
                     <h4>AI & APIs</h4>
                     <p>Knowledge in AI tools, ML, and API structures.</p>
                 </div>
             </div>
             <div class="roadmap-item" data-aos="fade-right">
-                <div class="road-date">2024</div>
                 <div class="road-content">
-                    <h4>Python , Web Projects</h4>
-                    <p>Reached Mid Python level and built many <strong>real-world projects</strong> and Contributed to <strong>Opensource</strong></p>
+                    <div class="road-date"><i class="far fa-calendar-alt"></i> 2024</div>
+                    <h4>Python & Web Projects</h4>
+                    <p>Reached Mid Python level, built many <strong>real-world projects</strong> and contributed to <strong>Opensource</strong>.</p>
                 </div>
             </div>
             <div class="roadmap-item" data-aos="fade-left">
-                <div class="road-date">June 2024</div>
                 <div class="road-content">
+                    <div class="road-date"><i class="far fa-calendar-alt"></i> June 2024</div>
                     <h4>Freelancing</h4>
                     <p>Worked with <strong>Aazhi Academy</strong> on web building.</p>
                 </div>
             </div>
             <div class="roadmap-item" data-aos="fade-right">
-                <div class="road-date">2025</div>
                 <div class="road-content">
+                    <div class="road-date"><i class="far fa-calendar-alt"></i> 2025</div>
                     <h4>Founder</h4>
-                    <p>Launched <a href="https://nithishprogrammer.github.io/skill.swap/"> <strong>Recipro Skills</strong></a> (Skill Swap Platform).</p>
+                    <p>Launched <a href="https://nithishprogrammer.github.io/skill.swap/" style="color: var(--primary-blue); text-decoration: none;"><strong>Recipro Skills</strong></a> (Skill Swap Platform).</p>
                 </div>
             </div>
             <div class="roadmap-item" data-aos="fade-left">
-                <div class="road-date">Feb 2026</div>
                 <div class="road-content">
+                    <div class="road-date"><i class="far fa-calendar-alt"></i> Feb 2026</div>
                     <h4>Backend & API</h4>
                     <p>FastAPI Basics, API endpoints, and Python freshen-up.</p>
                 </div>
             </div>
         </div>
-    </div>
-</div>
+    </section>
 
-		<div class="Projects" id="Projects">
-				<br><br>
-			<h1 class="worked" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">Projects</h1>
-			<h3>All the Projects that I have Worked are Solo Projects.<strong> All are done Only by Myself</strong></h3>
-			<br><br><br>
-			<h2><strong>1. JJ Herbal</strong></h2><br>
-			<h3>A Platform where you buy Products of JJ Herbals (Herbal Brand)</h3>
-			<h3 class="link"><a href="https://nithishprogrammer.github.io/jjherbals" style="color: #8576FF;">Visit Website</a></h3>
-			<br><br>
-			<h2><strong>2. Aazhi Kindergarten</strong></h2><br>
-			<h3>An Online Admisson website, that enables you to make your online admission for Your Child in Aazhi Kindergarten Training Centre. <strong>(Currently On hold)</strong></h3>
-			<h3 class="link"><a href="https://aazhikindergarten.in/" style="color: #8576FF;">Visit Website</a></h3>
-			<br><br>
-			<h2><strong>3. Weather Wesite</strong></h2><br>
-			<h3>A Web that displays Weather information based on the user's location or input. Fetch weather data from an external API to display Current Weather. It is Responsive design for mobile and desktop as well. </h3>
-			<h3 class="link"><a href="https://nithishprogrammer.github.io/weather/" style="color: #8576FF;" class="links">Visit Website</a></h3>
-			<br><br>
-			<h2><strong>4. Recipro Skills (Company Startup)</strong></h2><br>
-			<h3>Recipro Skills is a user-driven, peer-to-peer learning platform where learners swap skills instead of paying for courses. Users teach what they know and learn what they need, creating an accessible, community-driven education system.</h3>
-			<h3 class="link"><a href="https://nithishprogrammer.github.io/skill.swap/" style="color: #8576FF;" class="links">Visit Website</a></h3>
-			<br><br>
-			<h2><strong>5. The Brand Name</strong></h2><br>
-			<h3>An E-commerce website that sells Unique & Authentic Pictures.. Here You can Order the Pictures in Digital Prints (or) as Frames. </h3>
-			<h3 class="link"><a href="https://nithishprogrammer.github.io/saradha/" style="color: #8576FF;" class="links">Visit Website</a></h3>
-			<br><br>
-			<h2><strong>6. Spectraanet</strong></h2><br>
-			<h3>A website that tells about Spectraanet Computer, Laptop & Printer Service Centre in Pondicherry. Spectraanet is widely recognized throughout Puducherry. This web also has the option of Product selling.</h3>
-			<h3 class="link"><a href="https://nithishprogrammer.github.io/Spectraanet/" style="color: #8576FF;">Visit Website</a></h3>
-			<br><br>
-			<h2><strong>7. Chatbot - Aazhi Kindergarten</strong></h2><br>
-			<h3>A featured Chatbot built by me that helps you to know about Aazhi Kindergarten. Only informations abt Aazhi Kindergarten is answerable. </h3>
-			<h3 class="link"><a href="https://nithishprogrammer.github.io/AI_hometutor/Maths/" style="color: #8576FF;" class="links">Visit Website</a></h3>
-			<br><br>
-			<h2><strong>8. NASA API</strong></h2><br>
-			<h3>A Website that fetch you informations about space according to NASA through your search. You can Access NASA images, Updates, Live earth streaming (when NASA streams live). </h3>
-			<h3 class="link"><a href="https://nithishprogrammer.github.io/NASA/" style="color: #8576FF;" class="links">Visit Website</a></h3>
-			<br><br>
-			<h2><strong>9. The Newze</strong> (In Development)</h2><br>
-			<h3>A Web that fetches you about Current News from what you search. </h3>
-			<h3 class="link"><a href="https://nithishprogrammer.github.io/NASA/Newsapp/news.html" style="color: #8576FF;" class="links">Visit Website</a></h3>
-			<br><br>
-			<h2><strong>9. Qr code gen (in Py)</strong></h2><br>
-			<h3>An (.exe) application in Python for generating Qr codes for the information you give. This is fully done in Python.</h3>
-			<h3 class="link"><a href="https://github.com/NithishProgrammer/Nithish/raw/9bf98d4c176e915cb7b253b5b9f52ac2abd404a8/Qr_GenNithish.rar" style="color: #8576FF;" class="links" download>Download QR Code Gen</a></h3>
-			
-			<br><br><br><br>
-			</div>
+    <!-- Projects Section -->
+    <section id="Projects">
+        <div class="projects-header" data-aos="fade-down">
+            <h2 class="section-title" style="margin-bottom: 10px;">Projects</h2>
+            <h3>All the Projects that I have Worked are Solo Projects. <strong>All are done Only by Myself</strong></h3>
+        </div>
 
-			<div class="shop">
-				<br>
-				<h2>Nithish Work for You too!</h2>
+        <div class="project-grid">
+            <div class="project-card" data-aos="fade-up">
+                <div>
+                    <h2><i class="fas fa-leaf" style="color: #10B981;"></i> 1. JJ Herbal</h2>
+                    <h3 class="desc">A Platform where you buy Products of JJ Herbals (Herbal Brand).</h3>
+                </div>
+                <a href="https://nithishprogrammer.github.io/jjherbals" class="project-link">Visit Website <i class="fas fa-arrow-right"></i></a>
+            </div>
 
-				<div class="boxes" id="work1">
+            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                <div>
+                    <h2><i class="fas fa-school" style="color: #F59E0B;"></i> 2. Aazhi Kindergarten</h2>
+                    <h3 class="desc">An Online Admission website that enables online admission for your child in Aazhi Kindergarten Training Centre. <strong>(Currently On hold)</strong></h3>
+                </div>
+                <a href="https://aazhikindergarten.in/" class="project-link">Visit Website <i class="fas fa-arrow-right"></i></a>
+            </div>
 
-					<center>
-						<h4 style="color: rgb(18, 14, 228); font-weight: bolder; font-size: 20px;">1. Feedback System for Schools</h4>
-					</center>
-					<br>
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <div>
+                    <h2><i class="fas fa-cloud-sun" style="color: #3B82F6;"></i> 3. Weather Website</h2>
+                    <h3 class="desc">A Web that displays weather information based on the user's location or input. Fetches external API data. Responsive design for mobile and desktop.</h3>
+                </div>
+                <a href="https://nithishprogrammer.github.io/weather/" class="project-link">Visit Website <i class="fas fa-arrow-right"></i></a>
+            </div>
 
-				
-					<img src="feedback.png" class="bot">
-					
-				
-					<p>This platform serves as a bridge between the school administration and its stakeholders, promoting transparency and improvement and also <strong> Makes Easier when people search About the School in the internet, while when it becomes difficult to approach the school Directly </strong>. Through an intuitive interface and advanced design, users can submit their input seamlessly. The collected feedback is valuable for schools to identify areas of excellence and improvement, fostering a better learning environment and operational efficiency. <strong>The Review System for Schools</strong>. After Making, The system will <strong>be done with Your School Name</strong> </p>
-					<h3><del>Rs.12,000</del> &nbsp; Rs.8,000</h3>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-					<button id="buy" onclick="openRe()">Buy this work for you</button>
-					
-					<br>
+            <div class="project-card" data-aos="fade-up">
+                <div>
+                    <h2><i class="fas fa-exchange-alt" style="color: #8B5CF6;"></i> 4. Recipro Skills (Startup)</h2>
+                    <h3 class="desc">A user-driven, peer-to-peer learning platform where learners swap skills instead of paying for courses. Creates an accessible, community-driven education system.</h3>
+                </div>
+                <a href="https://nithishprogrammer.github.io/skill.swap/" class="project-link">Visit Website <i class="fas fa-arrow-right"></i></a>
+            </div>
 
-					<div class="overlay-form" style="width: 92%;">
-						
-						<form action="https://formsubmit.co/nithishanaricle@gmail.com" method="POST" style="width: 95%; background-color: rgb(246, 250, 255); border-radius: 10px; border: 1px;">
-							<button style="position: absolute; right: 2px; padding: 2px; border: 1px; border-radius: 6px; color: white; background-color: rgb(247, 118, 118);" onclick="closeform()">Close</button>
-							<br>
-							<input type="hidden" name="_next" value="https://nithishprogrammer.github.io/Nithish/thanks">
-							<input type="hidden" name="_captcha" value="false">
-							<input type="hidden" name="_subject" value="You got New work from a Customer (Rev. Sysytem)">
-							<br>
-							<h3>Request for Making (Review System)</h3>
-							<br>
+            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                <div>
+                    <h2><i class="fas fa-camera-retro" style="color: #EC4899;"></i> 5. The Brand Name</h2>
+                    <h3 class="desc">An E-commerce website that sells Unique & Authentic Pictures. Order pictures in Digital Prints or as Frames.</h3>
+                </div>
+                <a href="https://nithishprogrammer.github.io/saradha/" class="project-link">Visit Website <i class="fas fa-arrow-right"></i></a>
+            </div>
 
-							<label for="">Name</label><br>
-							<input type="text" placeholder="Enter Name" name="Name" required>
-							<br>
-							<label for="">Email</label>
-							<br>
-							<input type="email" name="Email" placeholder="Enter Email" required><br>
-							<label for="">Any note for Nithish</label>
-							<br>
-							<input type="text" name="Note from Customer." placeholder="Enter Your Note (Date you want to be finished , And any note to Nithish)" required><br>
-							<label for="">Agree to Make it and request</label>
-							<input type="checkbox" name="Agree" id="" name="Checked" value="Agreed to This" required>
-							<br><br>
-							<button type="submit" value="Submit" style="padding: 6px 20px;
-							border-radius: 4px;
-							border: solid 1px rgb(207, 207, 245);
-							cursor: pointer;
-							background-color: white;
-							color: blue;">Submit</button>
-							<br>
-							<br><br>
-						</form>
-					</div>
-				</div>
-				<br>
-				<hr style="height: 5px; background-color: aliceblue; border-radius: 14px; border: 0;">
-				<br>
-				
-				<div class="boxes">
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <div>
+                    <h2><i class="fas fa-laptop-medical" style="color: #06B6D4;"></i> 6. Spectraanet</h2>
+                    <h3 class="desc">A website for Spectraanet Computer, Laptop & Printer Service Centre in Pondicherry. Widely recognized in Puducherry, includes product selling options.</h3>
+                </div>
+                <a href="https://nithishprogrammer.github.io/Spectraanet/" class="project-link">Visit Website <i class="fas fa-arrow-right"></i></a>
+            </div>
 
-					<center>
-						<h4 style="color: rgb(18, 14, 228); font-weight: bolder; font-size: 20px;">2. Chatbot</h4>
-					</center>
-					<br>
+            <div class="project-card" data-aos="fade-up">
+                <div>
+                    <h2><i class="fas fa-comments" style="color: #14B8A6;"></i> 7. Chatbot - Aazhi</h2>
+                    <h3 class="desc">A custom chatbot built by me that helps users know about Aazhi Kindergarten. Answers questions specifically about the center's details.</h3>
+                </div>
+                <a href="https://nithishprogrammer.github.io/AI_hometutor/Maths/" class="project-link">Visit Website <i class="fas fa-arrow-right"></i></a>
+            </div>
 
-				
-					<img src="https://nithishprogrammer.github.io/Nithish/Chat-bot.png" class="bot">
-					
-				
-					<p>With this plan / product, Nithish will help you to build your Own <strong>Chatbot</strong>. The <strong>Chatbot will be custom</strong> for you and answer about your resources only. MAke sure <strong>You give all the resources</strong> that should be added in your chatbot to reply. Your bot can also <strong>Recognise Speech</strong> as well.</p>
-					<h3><del>Rs.7,000</del> &nbsp; Rs.5,000</h3>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
-					<button id="buy" onclick="textmsg()">Buy this work for you</button>
-					
-					<br>
+            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                <div>
+                    <h2><i class="fas fa-rocket" style="color: #6366F1;"></i> 8. NASA API</h2>
+                    <h3 class="desc">Fetches space information via NASA API. Access NASA images, updates, and live earth streaming (when NASA streams live).</h3>
+                </div>
+                <a href="https://nithishprogrammer.github.io/NASA/" class="project-link">Visit Website <i class="fas fa-arrow-right"></i></a>
+            </div>
 
-					
-				</div>
-				<p id="not"></p>
-				<br>
-				
-			</div>
-			<div class="conv" id="conv">
-				<br>
-				<center>
-				<h3>Register <span style="color: rgb(84, 84, 255); font-weight: bolder;">Yourself</span> here.</h3>
-				<p>Hey, Subscribe to <span style="color: rgb(84, 84, 255); font-weight: bolder;">Technology</span> with Nithish for Progress and Updates from him. !</p>
-<br>
-<h4 id="par" style="text-decoration: underline; text-decoration-color: blue; text-underline-offset: 6px;">Thanks <span id="logger" style="color: rgb(84, 84, 255); font-weight: bolder;"></span> , for Submitting. You will get a mail soon..</h4>
-<div id="form_box_div" style="border: solid 2px rgb(161, 191, 247); border-radius: 16px; padding: 8px; margin: 0px 20px 20px 20px;">
-				<form action="https://sheetdb.io/api/v1/5w26q8pomyfvo" method="POST" id="sheetdb-form">
-					
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <div>
+                    <h2><i class="far fa-newspaper" style="color: #F43F5E;"></i> 9. The Newze <span style="font-size:12px; color:gray;">(In Dev)</span></h2>
+                    <h3 class="desc">A web application that fetches you current news based on your search queries.</h3>
+                </div>
+                <a href="https://nithishprogrammer.github.io/NASA/Newsapp/news.html" class="project-link">Visit Website <i class="fas fa-arrow-right"></i></a>
+            </div>
 
-						<label for="">Name</label>
-						<br>
-						<input type="text" placeholder="Name.." name="data[Name]" id="logdata" required/>
-						<br><br>
-						<label for="">Email</label>
-						<br>
-						<input type="email" name="data[Email]" placeholder="Email.."  required/>
-					
-						<br><br>
-						<input type="submit" value="Submit" onclick="loggerr()" id="CSUB">
-						<br>
-						
-					</form>
-				</div>
-					<br>
+            <div class="project-card" data-aos="fade-up">
+                <div>
+                    <h2><i class="fas fa-qrcode" style="color: #000000;"></i> 9. Qr Code Gen (in Py)</h2>
+                    <h3 class="desc">An executable (.exe) application built entirely in Python for generating QR codes based on user input information.</h3>
+                </div>
+                <a href="https://github.com/NithishProgrammer/Nithish/raw/9bf98d4c176e915cb7b253b5b9f52ac2abd404a8/Qr_GenNithish.rar" download class="project-link">Download <i class="fas fa-download"></i></a>
+            </div>
+        </div>
+    </section>
 
-				<a href="https://nithishprogrammer.github.io/Nithish/merch/" style="text-decoration: none;">	<div style=" width: 260px; padding: 6px; background-color: #8576FF; color: aliceblue; border: 1px solid blue; border-radius: 12px; justify-content: center; align-items: center; display: flex; cursor: pointer; box-shadow: 10px 10px rgb(190, 166, 236);">Go to Nithish's Shop <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" style="width: 20px; padding: 2px;">&nbsp;<img src="https://cdn-icons-png.flaticon.com/512/12871/12871957.png" style="width: 26px; padding: 2px;"></div></a>
-				
-			</center>
-			<br>
-				
-			</div>
-		<div class="quote">
-			<br>
+    <!-- Services / Shop Section -->
+    <section class="shop">
+        <h2 class="section-title">Nithish Works for You Too!</h2>
+        
+        <div class="shop-grid">
+            <!-- Service 1 -->
+            <div class="shop-box" id="work1" data-aos="fade-up">
+                <h4>1. Feedback System for Schools</h4>
+                <img src="feedback.png" class="bot-img" alt="Feedback System">
+                <p>This platform serves as a bridge between the school administration and stakeholders, promoting transparency. <strong>Makes it easier when people search about the school on the internet.</strong> The collected feedback identifies areas of excellence and improvement. The system will be customized <strong>with your School Name</strong>.</p>
+                <div class="price"><del>Rs.12,000</del> Rs.8,000</div>
+                <button class="btn btn-primary" onclick="openRe()">Buy this work for you</button>
+            </div>
 
-			<h2 class="Quoteoftoday">Quote</h2><br>
+            <!-- Service 2 -->
+            <div class="shop-box" data-aos="fade-up" data-aos-delay="100">
+                <h4>2. Custom Chatbot</h4>
+                <img src="https://nithishprogrammer.github.io/Nithish/Chat-bot.png" class="bot-img" alt="Chatbot">
+                <p>Nithish will help you build your <strong>Own Custom Chatbot</strong> that answers queries based solely on your provided resources. Your bot can also <strong>Recognise Speech</strong>.</p>
+                <div class="price"><del>Rs.7,000</del> Rs.5,000</div>
+                <button class="btn btn-primary" onclick="textmsg()">Buy this work for you</button>
+                <p id="not" style="color: #EF4444; font-weight: bold; margin-top: 15px; text-align: center;"></p>
+            </div>
+        </div>
 
-			<h4 id="quotegen">“No amount of testing can prove a software right, a single test can prove a software wrong.”
+        <!-- Hidden Form Modal -->
+        <div class="overlay-form" id="overlayForm">
+            <div class="form-content">
+                <button class="close-btn" onclick="closeform()"><i class="fas fa-times"></i> Close</button>
+                <h3 style="margin-bottom: 20px; color: var(--dark-blue);">Request Review System</h3>
+                <form action="https://formsubmit.co/nithishanaricle@gmail.com" method="POST">
+                    <input type="hidden" name="_next" value="https://nithishprogrammer.github.io/Nithish/thanks">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_subject" value="You got New work from a Customer (Rev. System)">
+                    
+                    <label><strong>Name</strong></label>
+                    <input type="text" placeholder="Enter Name" name="Name" required>
+                    
+                    <label><strong>Email</strong></label>
+                    <input type="email" name="Email" placeholder="Enter Email" required>
+                    
+                    <label><strong>Notes for Nithish</strong></label>
+                    <input type="text" name="Note from Customer" placeholder="Target date, specific requirements..." required>
+                    
+                    <label style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+                        <input type="checkbox" name="Agree" value="Agreed to This" required style="width: auto; margin: 0;">
+                        I agree to request this build
+                    </label>
+                    
+                    <button type="submit">Submit Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
-</h4>
-			<h6 id="quotegen_author"></h6>
-			<br>
-			
-		</div><br>
-		<div class="Footer">
-			<h3 style="color: gray; font-size: 20px">&copy; Nithish S 2024</h3>
-			<br>
-			<a href="https://instagram.com/nithish_2101/"><img src="insta.png" class="footicons"></a>&nbsp;&nbsp;
-			<a href="https://www.linkedin.com/in/nithish2101/"><img src="Linkedin.png" class="footicons"></a>&nbsp;&nbsp;
-			<a href="https://github.com/NithishProgrammer"><img src="github.png" class="footicons"></a>&nbsp;&nbsp;
-		</div>
-		
-	</center>
+    <!-- Registration / Newsletter -->
+    <section class="conv" id="conv">
+        <h2 class="section-title" style="margin-bottom: 15px;">Register <span style="color: var(--primary-blue);">Yourself</span> Here</h2>
+        <p style="color: var(--text-light); margin-bottom: 30px;">Subscribe to Technology with Nithish for progress updates!</p>
+        
+        <h4 id="par" style="color: #10B981; display: none; margin-bottom: 20px;">Thanks <span id="logger" style="font-weight: bold;"></span>, for submitting. You will get a mail soon!</h4>
+        
+        <div id="form_box_div">
+            <form action="https://sheetdb.io/api/v1/5w26q8pomyfvo" method="POST" id="sheetdb-form">
+                <input type="text" placeholder="Your Name" name="data[Name]" id="logdata" required>
+                <input type="email" name="data[Email]" placeholder="Your Email" required>
+                <input type="submit" value="Subscribe Now" onclick="loggerr()" id="CSUB">
+            </form>
+        </div>
 
-	<script>
+        <div style="margin-top: 30px;">
+            <a href="https://nithishprogrammer.github.io/Nithish/merch/" class="btn btn-secondary" style="padding: 15px 30px; font-size: 18px;">
+                <i class="fas fa-store"></i> Go to Nithish's Shop
+            </a>
+        </div>
+    </section>
 
-	let sub1 = document.getElementById('CSUB');
+    <!-- Quote API Section -->
+    <section class="quote">
+        <i class="fas fa-quote-left"></i>
+        <h2 class="Quoteoftoday">Quote of the Day</h2>
+        <h4 id="quotegen">“No amount of testing can prove a software right, a single test can prove a software wrong.”</h4>
+        <h6 id="quotegen_author"></h6>
+    </section>
+
+    <!-- Footer -->
+    <footer class="Footer">
+        <div style="margin-bottom: 20px; font-size: 18px; font-weight: 500; padding: 0; flex-grow: 1;">Connect with me on Social Media</div>
+            <a href="https://instagram.com/nithish_2101/"><i class="fab fa-instagram" style="font-size: 24px; margin-right: 10px;"></i></a>
+            <a href="https://www.linkedin.com/in/nithish2101/"><i class="fab fa-linkedin" style="font-size: 24px; margin-right: 10px;"></i></a>
+            <a href="https://github.com/NithishProgrammer"><i class="fab fa-github" style="font-size: 24px; margin-right: 10px;"></i></a>
+        </div>
+        <br>
+        <br>
+        <h3 style="font-size: 16px; font-weight: 400;">&copy; Nithish S 2024</h3>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Init Animations
+        AOS.init({ duration: 800, once: true });
+
+        // SheetDB Form Logic
+        let sub1 = document.getElementById('CSUB');
         let para = document.getElementById('par');
-		let fbd = document.getElementById('form_box_div')
-		para.style.display = "none"
-		   var form = document.getElementById('sheetdb-form');
+        let fbd = document.getElementById('form_box_div');
+        let form = document.getElementById('sheetdb-form');
+
         form.addEventListener("submit", e => {
-          e.preventDefault();
-          fetch(form.action, {
-              method : "POST",
-              body: new FormData(document.getElementById("sheetdb-form")),
-          }).then(
-              response => response.json()
-          ).then((html) => {
-            // you can put any JS code here
-	   sub1.innerHTML = "Processing..";
-        sub1.style.background = "grey";
-        sub1.disabled = true
-        sub1.style.cursor = "none"
-            form.style.display = "none"
-            names.innerText = logdata;
-	 names.style.display = "inline"
-			
-
-
-          });
+            e.preventDefault();
+            sub1.value = "Processing...";
+            sub1.style.background = "grey";
+            sub1.disabled = true;
+            sub1.style.cursor = "not-allowed";
+            
+            fetch(form.action, {
+                method : "POST",
+                body: new FormData(document.getElementById("sheetdb-form")),
+            }).then(response => response.json())
+              .then((html) => {
+                  form.style.display = "none";
+                  fbd.style.display = "none";
+                  para.style.display = "block";
+              });
         });
 
-		function loggerr() {
+        function loggerr() {
+            let logdata = document.getElementById('logdata').value;
+            let names = document.getElementById('logger');
+            if (logdata !== "") {
+                names.innerText = logdata;
+            }
+        }
 
+        // Chatbase Bot
+        window.embeddedChatbotConfig = {
+            chatbotId: "kBWgZfBZFeFqRtn163yrq",
+            domain: "www.chatbase.co"
+        }
+    </script>
+    <script src="https://www.chatbase.co/embed.min.js" chatbotId="kBWgZfBZFeFqRtn163yrq" domain="www.chatbase.co" defer></script>
 
-			let logdata = document.getElementById('logdata').value;
+    <script>
+        // Shop Modal & Messaging Logic
+        let openR = document.getElementById('overlayForm');
 
-			let names = document.getElementById('logger');
+        function textmsg(){
+            let msg = document.getElementById('not');
+            msg.innerText = "Currently not available!";
+        }
 
-			form.style.display = "none"
-			para.style.display = "inline"
-			fbd.style.visibility = "hidden"
-            names.innerText = logdata;
-			names.style.display = "inline"
-			if (logdata == ""){
-				alert("Fill the form to Register")
-				form.style.display = "inline"
-				para.style.display = "none"
-				fbd.style.visibility = "visible"
-			}
+        function openRe(){
+            openR.style.display = "flex";
+        }
 
-			
-		}
-	</script>
+        function closeform(){
+            openR.style.display = "none";
+        }
 
-	<script>
-  AOS.init();
-</script>
-
-<script>
-window.embeddedChatbotConfig = {
-chatbotId: "kBWgZfBZFeFqRtn163yrq",
-domain: "www.chatbase.co"
-}
-</script>
-<script
-src="https://www.chatbase.co/embed.min.js"
-chatbotId="kBWgZfBZFeFqRtn163yrq"
-domain="www.chatbase.co"
-defer>
-</script>
-
-<script>
-
-let openR = document.querySelector('.overlay-form');
-openR.style.display = "none"
-
-function textmsg(){
-	let msg = document.getElementById('not');
-	msg.innerText = "Currently not available !"
-
-}
-</script>
-<script>
-
-const quote_p = document.getElementById('quotegen');
-const quote_author = document.getElementById('quotegen_author');
-const api_url = "https://quotes-api-self.vercel.app/quote/"
-async function get_q(url) {
-
-	const resp = await fetch(url);
-	let dataq = await resp.json();
-	quote_p.innerText = dataq["quote"]
-	quote_author.innerText = "- " + dataq["author"]
-
-
-	
-}
-
-get_q(api_url);
-
-function openRe(){
-
-	openR.style.position = "absolute"
-
-	openR.style.display = "block"
-}
-
-function closeform(){
-
-	openR.style.display = "none"
-}
-</script>
-
-
+        // Quote API Logic
+        const quote_p = document.getElementById('quotegen');
+        const quote_author = document.getElementById('quotegen_author');
+        const api_url = "https://quotes-api-self.vercel.app/quote/";
+        
+        async function get_q(url) {
+            try {
+                const resp = await fetch(url);
+                let dataq = await resp.json();
+                quote_p.innerText = "“" + dataq["quote"] + "”";
+                quote_author.innerText = "- " + dataq["author"];
+            } catch (error) {
+                console.log("Using fallback quote due to fetch error.");
+            }
+        }
+        get_q(api_url);
+    </script>
 </body>
 </html>
